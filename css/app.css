@@ -129,3 +129,53 @@ footer {
     margin-top: -0.5rem;
     padding-bottom: 5rem;
 }
+
+
+/* phao giay */  
+  .confettis {
+    position: absolute;    
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-180deg);
+    perspective: 600px;
+    transform-style: preserve-3d;
+  }
+  
+  #fuddiConfettiSvg {
+    position: fixed;
+    fill: #fff;
+    width: 10rem;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-99deg);
+  }
+  
+  .confetti {
+    pointer-events: none;
+    
+    position: absolute;
+    transform: rotate(var(--rotation));
+    
+    span {
+      position: absolute;
+      width: .2rem;
+      height: .35rem;
+      will-change: transform;
+      background-color: var(--color);
+      animation: fliegen calc(30s * var(--rnd)) infinite cubic-bezier(0.2, 1, 0.2, 1);
+      animation-delay: -5s;
+    }
+  }
+  
+  
+  @keyframes fliegen {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(calc(30vh + 55vh * var(--rnd))) rotateY(calc(3000deg * var(--rnd))) rotateX(calc(2000deg * var(--rnd))) rotateZ(calc(1060deg * var(--rnd))); 
+    }
+  }
+
+/*******************************/
+

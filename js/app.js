@@ -163,7 +163,7 @@ const util = (() => {
         document.getElementById('form-nama').value = name;
         document.getElementById('nama-tamu').appendChild(div);
     };
-
+    
     const animation = async () => {
         const duration = 10 * 1000;
         const animationEnd = Date.now() + duration;
@@ -218,9 +218,8 @@ const util = (() => {
             origin: { y: 0.8 },
             zIndex: 1057
         });
-        await session.check();
         await animation();
-    };
+    };    
 
     const show = () => {
         tamu();
@@ -957,3 +956,17 @@ const comment = (() => {
         kirim,
     };
 })();
+
+const fuddiConfetti = () => {
+    const konfetti = (new Array(Math.round(200))).fill('').reduce((r, actuel) => (
+      r + `<i class="confetti" style="--rotation: ${-50 + Math.random() * 100}deg; --color: hsl(${Math.random() * 360},100%,70%); --rnd: ${Math.random()}"><span></span></i>`
+    ), '');
+    
+    return konfetti;
+  }
+  
+  const $div = document.createElement('DIV');
+  $div.classList.add('confettis');
+  $div.innerHTML = fuddiConfetti();
+  
+  document.querySelector('#phao-giay').appendChild($div);
