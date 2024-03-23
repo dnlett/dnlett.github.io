@@ -165,7 +165,7 @@ const util = (() => {
     };
     
     const animation = async () => {
-        const duration = 10 * 1000;
+        const duration = 5*60 * 1000;
         const animationEnd = Date.now() + duration;
         let skew = 1;
 
