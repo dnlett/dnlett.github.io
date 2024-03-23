@@ -3,7 +3,9 @@ html {
 }
 
 body {
-    font-family: 'Gwendolyn';
+    /* font-family: 'Gwendolyn'; */
+    font-family: "Dancing Script", cursive;
+
     padding: 0 !important;
     -ms-overflow-style: none !important;
     scrollbar-width: none !important;
@@ -124,8 +126,7 @@ body::-webkit-scrollbar {
     margin-bottom: -0.5rem;
 }
 
-footer {
-    background-color: #111111 !important;
+footer {    
     margin-top: -0.5rem;
     padding-bottom: 5rem;
 }
@@ -178,4 +179,3 @@ footer {
   }
 
 /*******************************/
-
