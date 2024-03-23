@@ -162,8 +162,8 @@ footer {
       height: .35rem;
       will-change: transform;
       background-color: var(--color);
-      animation: fliegen calc(30s * var(--rnd)) infinite cubic-bezier(0.2, 1, 0.2, 1);
-      animation-delay: -5s;
+      animation: fliegen calc(1s * var(--rnd)) infinite cubic-bezier(0.2, 1, 0.2, 1);
+      animation-delay: -10s;
     }
   }
   
